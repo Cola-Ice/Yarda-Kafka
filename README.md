@@ -264,7 +264,7 @@ Kafka将数据保存在磁盘中，以主题 + 分区的形式组织文件目录
 
 ### 4.消息检索流程
 
-![image-20220330164731312](https://github.com/Cola-Ice/Yarda-Kafka/raw/master/doc/image/image-20220330164731312.png)
+![image-20220330164731312](https://github.com/Cola-Ice/Yarda-Kafka/raw/master/doc/image/image_16486299769913.png)
 
 Kafka在分区内根据消息的offset检索消息
 
