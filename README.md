@@ -66,7 +66,7 @@ $ docker run --restart always -d --name kafka-server1 \
     -p 9092:9092 \
     -e KAFKA_BROKER_ID=1\
     -e KAFKA_HEAP_OPTS=-Xmx256M \
-    -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://yarda.top:9092 \
+    -e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://xxx.xxx.x.xx:9092 \
     -e ALLOW_PLAINTEXT_LISTENER=yes \
     -e KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper:2181 \
     bitnami/kafka:2.4.1
@@ -274,7 +274,7 @@ Kafka在分区内根据消息的offset检索消息
 
 > 相对offset，即相对segment文件中最小的offset的偏移量
 
-3.打开.log文件，从上边找到的物理偏移量开始，顺序扫描值找找到指定offset的那条消息
+3.打开.log文件，从上边找到的物理偏移量开始，顺序扫描直至找到指定offset的那条消息
 
 这套机制建立在offset有序的基础上，利用segment + 有序offset + 稀疏索引 + 二分查找 + 顺序查找，实现高效检索
 
